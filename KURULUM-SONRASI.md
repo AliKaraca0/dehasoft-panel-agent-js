@@ -1,6 +1,15 @@
 # Kurulum Sonrası Yapılacaklar
 
-`npm install @dehasoft/panel-agent` sonrası bir Next.js sitesine entegre ederken sırayla bunları yap.
+Repo private olduğu için npm registry yerine GitHub'dan kuruluyor:
+
+```bash
+npm install "git+ssh://git@github.com/AliKaraca0/dehasoft-panel-agent-js.git"
+```
+
+SSH anahtarın GitHub'a kayıtlı olmalı (`gh ssh-key add ~/.ssh/id_ed25519.pub` gibi) —
+npm, GitHub git bağımlılıklarında HTTPS token'ı görmezden gelip SSH'a zorluyor.
+
+Kurulumdan sonra bir Next.js sitesine entegre ederken sırayla bunları yap.
 
 ## 1. Panelde token oluştur
 

@@ -7,9 +7,19 @@ a panel outage; every call resolves to `{ ok, status, error }`.
 
 ## Install
 
+This repo is private — install directly from GitHub rather than npm.
+npm's private-repo git handling is unreliable at fetching content (it tries
+a public-only tarball shortcut first and silently gives up), so this
+package commits its `dist/` build output to git — no build step runs, or
+needs to run, at install time.
+
 ```bash
-npm install @dehasoft/panel-agent
+npm install "git+ssh://git@github.com/AliKaraca0/dehasoft-panel-agent-js.git"
 ```
+
+You need an SSH key registered on your GitHub account — npm forces SSH for
+GitHub git dependencies even when given an `https://` URL, so an
+HTTPS-only token won't work here (unlike Composer, which respects it).
 
 ## Next.js (Route Handler or Server Action)
 
